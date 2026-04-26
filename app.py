@@ -6,12 +6,11 @@ st.title("📚 Perpustakaan Digital Kurikulum PSEP")
 st.write("Pusat Dokumen Revisi Kurikulum 2025")
 st.divider()
 
-# JALUR UTAMA: Pastikan Nama Repo "Dokumen_Kurikulum_PSEP" (Garis Bawah)
-base_url = "https://raw.githubusercontent.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/main/"
+# JALUR UTAMA: Raw Github User Content (Paling Stabil)
+raw_base = "https://raw.githubusercontent.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/main/"
 
 def buat_tombol(file_name, label, warna):
-    # Link langsung menggunakan ?raw=true agar memaksa download
-    link = f"https://github.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/blob/main/{file_name}?raw=true"
+    link = f"{raw_base}{file_name}"
     st.markdown(f"""
         <a href="{link}">
             <button style="
@@ -34,7 +33,7 @@ def buat_tombol(file_name, label, warna):
 st.subheader("📄 1. Draft 7 Kurikulum PSEP")
 col1, col2 = st.columns(2)
 with col1:
-    # Coba pastikan di GitHub namanya draft7.docx (huruf kecil semua)
+    # Menggunakan raw link langsung
     buat_tombol("draft7.docx", "📥 Download Word (.docx)", "#0078d4")
 with col2:
     buat_tombol("draft7.pdf", "📂 Buka PDF (.pdf)", "#d13438")
@@ -45,7 +44,7 @@ st.divider()
 st.subheader("📑 2. Policy Brief")
 col3, col4 = st.columns(2)
 with col3:
-    # Coba pastikan di GitHub namanya policy_brief.docx
+    # Menggunakan raw link langsung
     buat_tombol("policy_brief.docx", "📥 Download Word (.docx)", "#0078d4")
 with col4:
     buat_tombol("policy_brief.pdf", "📂 Buka PDF (.pdf)", "#d13438")
@@ -54,7 +53,7 @@ st.divider()
 
 # --- SEKSI 3: DASHBOARD ---
 st.subheader("📊 3. Dashboard Excel")
-# Sesuaikan jika di GitHub namanya dashboard.xlsx atau dashboard.XLSX
+# Perhatikan jika dashboard.xlsx (kecil) atau dashboard.XLSX (besar)
 buat_tombol("dashboard.xlsx", "🟢 DOWNLOAD DASHBOARD EXCEL", "#107c10")
 
 st.divider()
