@@ -6,10 +6,9 @@ st.title("📚 Perpustakaan Digital Kurikulum PSEP")
 st.write("Pusat Dokumen Revisi Kurikulum 2025 & Policy Brief")
 st.divider()
 
-# Fungsi untuk membuat link download yang aman dari spasi
+# Fungsi otomatis untuk menangani spasi di URL
 def make_github_url(file_name):
     base_url = "https://github.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/raw/main/"
-    # Mengganti spasi dengan %20 agar link tidak terputus
     return base_url + file_name.replace(" ", "%20")
 
 # --- BAGIAN 1: DRAFT KURIKULUM ---
@@ -34,11 +33,13 @@ col3, col4 = st.columns(2)
 
 with col3:
     st.info("Policy Brief (Word)")
+    # DISESUAIKAN DENGAN NAMA FILE DI GITHUB AKANG
     pb_docx = "Policy Brief_PSEP_2025_YS.docx"
     st.markdown(f'<a href="{make_github_url(pb_docx)}"><button style="width:100%; border-radius:10px; background-color:#0078d4; color:white; padding:10px; cursor:pointer;">📥 Download .DOCX</button></a>', unsafe_allow_html=True)
 
 with col4:
     st.success("Policy Brief (PDF)")
+    # DISESUAIKAN DENGAN NAMA FILE DI GITHUB AKANG
     pb_pdf = "Policy Brief_PSEP_2025_YS.pdf"
     st.markdown(f'<a href="{make_github_url(pb_pdf)}"><button style="width:100%; border-radius:10px; background-color:#d13438; color:white; padding:10px; cursor:pointer;">📂 Buka .PDF</button></a>', unsafe_allow_html=True)
 
@@ -47,6 +48,7 @@ st.divider()
 # --- BAGIAN 3: DASHBOARD EXCEL ---
 st.header("📊 3. Dashboard & Instrumen")
 st.warning("Dashboard Excel (Full Version)")
+# DISESUAIKAN DENGAN NAMA FILE DI GITHUB AKANG
 excel_name = "Dashboard Kurikulum PSEP_2025_YS.xlsx"
 st.markdown(f'<a href="{make_github_url(excel_name)}"><button style="width:100%; border-radius:10px; background-color:#107c10; color:white; padding:15px; font-weight:bold; cursor:pointer;">🟢 DOWNLOAD DASHBOARD EXCEL</button></a>', unsafe_allow_html=True)
 
