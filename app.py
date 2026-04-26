@@ -1,30 +1,36 @@
 import streamlit as st
 
-st.set_page_config(page_title="Repositori Dokumen Kurikulum PSEP", layout="wide")
+st.set_page_config(page_title="Perpustakaan Kurikulum PSEP", layout="centered")
 
 st.title("📚 Perpustakaan Digital Kurikulum PSEP")
-st.write("Selamat datang di pusat dokumen revisi kurikulum 2025.")
+st.write("Pusat Dokumen Revisi Kurikulum 2025")
 
-# Menu navigasi dokumen
-tab1, tab2, tab3 = st.tabs(["📄 Draft Kurikulum", "📑 Policy Brief", "📊 Lampiran"])
+st.divider()
 
-with tab1:
-    st.subheader("Draft 7 Kurikulum PSEP 2025")
-    # LINK INI SUDAH DIPERBAIKI SESUAI REPO AKANG
-    st.markdown("""
-    <a href="https://raw.githubusercontent.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/main/Draft_7_Kurikulum_PSEP_2025.pdf" target="_blank">
-        <button style="color: white; background-color: #1a4d2e; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-            📂 Klik di sini untuk Membuka/Download Draft Kurikulum
+st.subheader("📄 Draft 7 Revisi Kurikulum EP 2025")
+st.info("Catatan: Dokumen ini dalam format Word (.docx). Silakan klik tombol di bawah untuk mengunduh.")
+
+# LINK INI SUDAH DISESUAIKAN DENGAN NAMA FILE ASLI DI GITHUB AKANG
+# Nama file: Draft%207%20Revisi%20Kurikulum%20EP_2025_YS.docx
+word_url = "https://github.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/raw/main/Draft%207%20Revisi%20Kurikulum%20EP_2025_YS.docx"
+
+st.markdown(f"""
+    <a href="{word_url}">
+        <button style="
+            width: 100%;
+            background-color: #0078d4;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        ">
+            📥 DOWNLOAD DRAFT 7 (WORD)
         </button>
     </a>
     """, unsafe_allow_html=True)
-    st.info("Catatan: Gunakan dokumen ini sebagai referensi utama hasil Stress Test.")
 
-with tab2:
-    st.subheader("Policy Brief Transformasi Digital")
-    st.write("Sedang dalam proses penyusunan.")
-
-with tab3:
-    st.subheader("Lampiran & Data Pendukung")
-    st.write("- Data Tracer Study")
-    st.write("- Hasil FGD Stakeholder")
+st.divider()
+st.caption("PSEP Unisba - Sistem Integrasi Kurikulum")
