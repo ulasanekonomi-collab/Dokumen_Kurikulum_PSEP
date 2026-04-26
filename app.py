@@ -10,15 +10,13 @@ tab1, tab2, tab3 = st.tabs(["📄 Draft Kurikulum", "📑 Policy Brief", "📊 L
 
 with tab1:
     st.subheader("Draft 7 Kurikulum PSEP 2025")
-    # Link ke file PDF di GitHub Akang
-    st.markdown("[Klik di sini untuk membaca Draft Kurikulum](https://github.com/USER_AKANG/Dokumen_Kurikulum_PSEP/raw/main/Draft_7_Kurikulum_PSEP_2025.pdf)")
+    # Link asli ke file PDF Akang
+    st.markdown("[👉 Klik di sini untuk membaca Draft Kurikulum](https://github.com/ulasanekonomi-collab/Dokumen_Kurikulum_PSEP/raw/main/Draft_7_Kurikulum_PSEP_2025.pdf)")
     st.info("Catatan: Dokumen ini telah melalui uji Stress Test dan Vertical Alignment Analysis.")
 
 with tab2:
     st.subheader("Policy Brief Transformasi Digital")
-    st.markdown("[Buka Policy Brief](https://github.com/USER_AKANG/Dokumen_Kurikulum_PSEP/raw/main/Policy_Brief_PSEP.pdf)")
+    st.write("Dokumen Policy Brief sedang disiapkan.")
 
 with tab3:
     st.subheader("Lampiran & Data Pendukung")
-    st.write("- Data Tracer Study")
-    st.write("- Hasil FGD Stakeholder")
